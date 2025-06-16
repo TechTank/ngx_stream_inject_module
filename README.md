@@ -1,6 +1,8 @@
 # ngx\_stream\_inject\_module
 
-![logo](https://github.com/user-attachments/assets/d0bee57f-5316-4aca-9bfa-8f1e947f614a)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d0bee57f-5316-4aca-9bfa-8f1e947f614a" alt="logo">
+</p>
 
 `ngx_stream_inject_module` is a custom NGINX stream module that allows you to inject data into a TCP connection **immediately after** the upstream connection is established.
 
