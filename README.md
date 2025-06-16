@@ -118,7 +118,7 @@ This module is free for **personal and educational use**.
 **Commercial use requires a separate commercial license.** Please contact [TechTank](https://github.com/TechTank) for details.
 
 ```text
-Copyright (c) 2024 TechTank
+Copyright (c) 2025 Brogan Scott Houston McIntyre (github.com/TechTank)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to use
