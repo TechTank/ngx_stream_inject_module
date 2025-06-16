@@ -27,6 +27,7 @@
 stream {
     inject_enable       on;
     inject_max_length   1024;
+    inject_max_defer    100;
 
     server {
         listen          12345;
@@ -44,6 +45,7 @@ stream {
 stream {
     inject_enable       on;
     inject_max_length   2048;
+    inject_max_defer    150;
 
     server {
         listen          2222;
@@ -59,11 +61,12 @@ stream {
 
 ## ⚙️ Directives
 
-| Directive           | Context     | Description                               |
-| ------------------- | ----------- | ----------------------------------------- |
-| `inject_enable`     | main/server | Enables injection on this level (on/off)  |
-| `inject_max_length` | main/server | Maximum allowed injection string length   |
-| `inject_string`     | server      | The string to inject (supports variables) |
+| Directive           | Context     | Description                                                              |
+| ------------------- | ----------- | ------------------------------------------------------------------------ |
+| `inject_enable`     | main/server | Enables injection on this level (on/off)                                 |
+| `inject_max_length` | main/server | Maximum allowed injection string length                                  |
+| `inject_max_defer`  | main        | Maximum number of upstream-connection polls to defer before timing out   |
+| `inject_string`     | server      | The string to inject (supports variables)                                |
 
 ---
 
