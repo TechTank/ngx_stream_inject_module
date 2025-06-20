@@ -1,0 +1,21 @@
+ngx_addon_name=ngx_stream_inject_module
+
+SRCS="$ngx_addon_dir/src/ngx_stream_inject_module.c"
+DEPS="$ngx_addon_dir/src/ngx_stream_inject_module.h"
+
+if test -n "$ngx_module_link"; then
+    # dynamic build (or static-with-compat)
+    ngx_module_type=STREAM
+    ngx_module_name=$ngx_addon_name
+    ngx_module_srcs="$SRCS"
+    ngx_module_deps="$DEPS"
+    # no extra libs needed
+    ngx_module_libs=
+    . auto/module
+
+else
+    # pure static build
+    STREAM_MODULES="$STREAM_MODULES $ngx_addon_name"
+    NGX_ADDON_SRCS="$NGX_ADDON_SRCS $SRCS"
+    NGX_ADDON_DEPS="$NGX_ADDON_DEPS $DEPS"
+fi
